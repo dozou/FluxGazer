@@ -6,9 +6,9 @@ import numpy as np
 import csv
 import pytest
 from PySide6.QtWidgets import QApplication
-from motor_sim.gui import Window
-from motor_sim.geometry import Parameters
-from motor_sim.plot_settings import AxisDialog
+from flux_gazer.gui import Window
+from flux_gazer.geometry import Parameters
+from flux_gazer.plot_settings import AxisDialog
 
 
 def test_gui_controls(tmp_path):

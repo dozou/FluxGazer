@@ -3,7 +3,7 @@ import csv
 from dataclasses import asdict
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
-from motor_sim.theme import colors,style_axes
+from flux_gazer.theme import colors,style_axes
 
 
 class TorquePlot(FigureCanvasQTAgg):

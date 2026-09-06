@@ -4,9 +4,9 @@ from pathlib import Path
 import json
 import numpy as np
 from matplotlib.tri import LinearTriInterpolator
-from motor_sim.geometry import Parameters
-from motor_sim.solver import solve
-from motor_sim.postprocess import tooth_br, triangulation
+from flux_gazer.geometry import Parameters
+from flux_gazer.solver import solve
+from flux_gazer.postprocess import tooth_br, triangulation
 
 
 def main():

@@ -2,7 +2,19 @@
 
 FluxGazer（フラックスゲイザー）は、回転型モーターの磁界と特性を可視化するPythonシミュレータです。現行版はSPMモーターの二次元・線形静磁界解析と無次元トルクの参考表示に対応し、初期モデルは8極12スロットです。
 
-内部Pythonパッケージ名は `motor_sim`、既存JSONの形式識別子は `motor_sim.standard_spm` を継続使用します。名称変更前の定義ファイルと起動コマンドはそのまま利用できます。
+## プロジェクトの目的
+
+本プロジェクトは、**AIをベースにした開発を通じて、実用に耐える回転型モータシミュレータを開発すること**を目的としています。AIを設計・実装・検証・文書化に活用し、物理的整合性、数値解の収束性、将来の実機測定との比較によって品質を確認します。
+
+現在の解析エンジンは有限要素法（FEM）であり、学習済みAIモデルによって磁界を推定するものではありません。実用性は開発目標で、現段階は無次元・線形モデルによる開発版です。実機の設計判断に使用できる精度や信頼性を認証した段階ではありません。
+
+## ライセンス・公開範囲
+
+FluxGazer独自のソースコードと文書は **MIT License** です。[LICENSE](LICENSE) を参照してください。著作権表示は「2026 FluxGazer contributors」としています。
+
+依存ライブラリはそれぞれのライセンスに従います。特にTriangle本体には商用製品への組込み等に別許諾が必要な条件があり、ソフト全体の依存構成をMITとして再ライセンスするものではありません。[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) と [公開準備の記録](doc/release_preparation.md) を参照してください。
+
+内部Pythonパッケージ名は `flux_gazer`、既存JSONの形式識別子は `motor_sim.standard_spm` を継続使用します。名称変更前の定義ファイルはそのまま利用できます。モジュール起動は `python -m flux_gazer` を使用してください。
 
 現行の機能・計算式・画面・JSON/CSV形式をまとめた仕様書は [doc/specification.md](doc/specification.md) を参照してください。
 
@@ -93,7 +105,7 @@ Python / PySide6 / NumPy / SciPy による、無次元・線形の一次三角�
 PowerShellでリポジトリに移動して実行します。
 
 ```powershell
-.\.venv\Scripts\python.exe -m motor_sim
+.\.venv\Scripts\python.exe -m flux_gazer
 # main.pyからも起動できます（IDEの実行対象にも指定可能）
 .\.venv\Scripts\python.exe main.py
 # または
@@ -105,7 +117,7 @@ PowerShellでリポジトリに移動して実行します。
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe -m motor_sim
+.\.venv\Scripts\python.exe -m flux_gazer
 ```
 
 このPCの元の `.venv` は存在しないPython 3.13本体を参照していたため、利用可能なPython 3.12で同じ場所に再構築しています。新たな起動用環境への切り替えは不要です。
@@ -124,7 +136,7 @@ python -m venv .venv
 
 コイルは各歯のu=0.68～0.82、v=0.078～0.12とその反対側。U,V,Wを4回繰り返します。同一歯の+v側を+Jz、−v側を−Jzとする共通規約です。FEM結果で、U正・V/W負のときU歯のBrが外向きになることを確認しています。
 
-比透磁率は鉄800、磁石1.05、空気／コイル1。Br残留値は1。1 p.u.の仮電流密度を無次元5と置きました。実機のアンペアや巻数との対応はまだありません。変更箇所は `motor_sim/geometry.py` の不変データクラス `Parameters` です。
+比透磁率は鉄800、磁石1.05、空気／コイル1。Br残留値は1。1 p.u.の仮電流密度を無次元5と置きました。実機のアンペアや巻数との対応はまだありません。変更箇所は `flux_gazer/geometry.py` の不変データクラス `Parameters` です。
 
 輪郭をポリゴン化し、同じ輪郭を材料分類・境界拘束メッシュ・描画に使います。円弧は弦で近似します。歯とヨークの意図した接合以外の材料の面積重複は検証しています。磁石底面とロータは端点を共有します。
 

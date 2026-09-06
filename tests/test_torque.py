@@ -1,8 +1,8 @@
 import numpy as np
-from motor_sim.geometry import Parameters
-from motor_sim.solver import solve
-from motor_sim.excitation import currents
-from motor_sim.torque import maxwell_torque
+from flux_gazer.geometry import Parameters
+from flux_gazer.solver import solve
+from flux_gazer.excitation import currents
+from flux_gazer.torque import maxwell_torque
 
 
 def test_torque_sign_scaling_and_sampling():

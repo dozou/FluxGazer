@@ -3,8 +3,8 @@ import json
 from dataclasses import asdict, fields
 from pathlib import Path
 import numpy as np
-from motor_sim.geometry import Parameters, Geometry
-from motor_sim.excitation import winding
+from flux_gazer.geometry import Parameters, Geometry
+from flux_gazer.excitation import winding
 
 
 FORMAT = 'motor_sim.standard_spm'

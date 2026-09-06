@@ -5,8 +5,8 @@ import shapely
 from shapely.ops import unary_union
 from scipy.sparse import coo_matrix
 from scipy.sparse.linalg import splu
-from motor_sim.geometry import Geometry
-from motor_sim.excitation import winding
+from flux_gazer.geometry import Geometry
+from flux_gazer.excitation import winding
 
 
 @dataclass

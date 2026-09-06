@@ -6,18 +6,18 @@ import numpy as np
 from PySide6 import QtCore, QtWidgets, QtGui
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
 from matplotlib.figure import Figure
-from motor_sim import APP_NAME
-from motor_sim.geometry import Parameters
-from motor_sim.cache import FieldCache
-from motor_sim.excitation import currents, dq, winding, winding_axis
-from motor_sim.postprocess import triangulation, tooth_br
-from motor_sim.definition import load_definition, validate_parameters
-from motor_sim.editor import ModelEditor
-from motor_sim.drawing import draw_polygon
-from motor_sim.torque import maxwell_torque
-from motor_sim.theme import colors,style_axes,set_widget_theme
-from motor_sim.torque_plot import TorquePlot
-from motor_sim.plot_settings import AxisDialog
+from flux_gazer import APP_NAME
+from flux_gazer.geometry import Parameters
+from flux_gazer.cache import FieldCache
+from flux_gazer.excitation import currents, dq, winding, winding_axis
+from flux_gazer.postprocess import triangulation, tooth_br
+from flux_gazer.definition import load_definition, validate_parameters
+from flux_gazer.editor import ModelEditor
+from flux_gazer.drawing import draw_polygon
+from flux_gazer.torque import maxwell_torque
+from flux_gazer.theme import colors,style_axes,set_widget_theme
+from flux_gazer.torque_plot import TorquePlot
+from flux_gazer.plot_settings import AxisDialog
 
 
 class Worker(QtCore.QObject):

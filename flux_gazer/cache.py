@@ -1,5 +1,5 @@
 from collections import OrderedDict
-from motor_sim.solver import solve
+from flux_gazer.solver import solve
 
 
 class FieldCache:

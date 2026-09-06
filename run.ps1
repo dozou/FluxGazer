@@ -1,1 +1,1 @@
-& "$PSScriptRoot\.venv\Scripts\python.exe" -m motor_sim
+& "$PSScriptRoot\.venv\Scripts\python.exe" -m flux_gazer

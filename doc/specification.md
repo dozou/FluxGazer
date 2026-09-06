@@ -10,7 +10,7 @@
 |文書の位置づけ|現行実装に基づく機能・計算・データ仕様。将来構想は第14章に分離|
 |単位系|無次元。SI物理量の入力・換算機能は未実装|
 
-製品副題は「Electric Motor Simulation」。内部パッケージ名 `motor_sim` とJSON形式識別子 `motor_sim.standard_spm` は互換性のため維持する。作業ディレクトリ名は製品名とは独立し、本名称変更では変更しない。
+製品副題は「Electric Motor Simulation」。内部パッケージ名は `flux_gazer`。JSON形式識別子 `motor_sim.standard_spm` は既存ファイルとの互換性のため維持する。作業ディレクトリ名は製品名とは独立し、本名称変更では変更しない。
 
 ## 1. 目的と適用範囲
 
@@ -39,11 +39,11 @@
 ```powershell
 .\.venv\Scripts\python.exe main.py
 # 同等の起動方法
-.\.venv\Scripts\python.exe -m motor_sim
+.\.venv\Scripts\python.exe -m flux_gazer
 .\run.ps1
 ```
 
-新規環境ではPythonで `.venv` を作成し、そのPythonを使って `pip install -r requirements.txt` を実行する。アプリ内のimportは `motor_sim.*` の絶対importを用いる。Windowsでは利用可能なメイリオを読み込む。日本語表示には対応フォントが必要。
+新規環境ではPythonで `.venv` を作成し、そのPythonを使って `pip install -r requirements.txt` を実行する。アプリ内のimportは `flux_gazer.*` の絶対importを用いる。Windowsでは利用可能なメイリオを読み込む。日本語表示には対応フォントが必要。
 
 ## 3. 座標・量・符号
 
@@ -379,7 +379,7 @@ UTF-8 BOM付き、カンマ区切り、ヘッダー1行、機械角昇順。保�
 
 |ファイル|責務|
 |---|---|
-|main.py / motor_sim/__main__.py|起動入口|
+|main.py / flux_gazer/__main__.py|起動入口|
 |geometry.py|Parameters、標準ポリゴン、極数・空隙の幾何変換|
 |definition.py|生成用入力からParametersへの変換、検査、JSON入出力|
 |excitation.py|巻線・軸ずれ・電流・Park変換|

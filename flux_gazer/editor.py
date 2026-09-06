@@ -2,11 +2,11 @@
 from PySide6 import QtCore, QtWidgets
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
-from motor_sim.definition import standard_parameters, save_definition, load_definition
-from motor_sim.geometry import Geometry
-from motor_sim.drawing import draw_polygon
-from motor_sim.excitation import winding
-from motor_sim.theme import colors,style_axes
+from flux_gazer.definition import standard_parameters, save_definition, load_definition
+from flux_gazer.geometry import Geometry
+from flux_gazer.drawing import draw_polygon
+from flux_gazer.excitation import winding
+from flux_gazer.theme import colors,style_axes
 
 
 class ModelEditor(QtWidgets.QWidget):

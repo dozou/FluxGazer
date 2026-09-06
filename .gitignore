@@ -3,3 +3,10 @@
 __pycache__/
 .pytest_cache/
 artifacts/
+.idea/
+.env
+.env.*
+!.env.example
+build/
+dist/
+*.egg-info/

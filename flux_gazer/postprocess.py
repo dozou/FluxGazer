@@ -1,6 +1,6 @@
 import numpy as np
 from matplotlib.tri import Triangulation, LinearTriInterpolator
-from motor_sim.geometry import rotate
+from flux_gazer.geometry import rotate
 
 
 def triangulation(solution):

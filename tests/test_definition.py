@@ -2,10 +2,10 @@ import json
 from dataclasses import asdict,replace
 import numpy as np
 import pytest
-from motor_sim.definition import save_definition,load_definition,standard_parameters
-from motor_sim.geometry import Parameters,Geometry
-from motor_sim.solver import solve
-from motor_sim.postprocess import tooth_br
+from flux_gazer.definition import save_definition,load_definition,standard_parameters
+from flux_gazer.geometry import Parameters,Geometry
+from flux_gazer.solver import solve
+from flux_gazer.postprocess import tooth_br
 
 
 def test_definition_roundtrip(tmp_path):

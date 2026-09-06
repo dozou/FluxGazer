@@ -5,7 +5,7 @@ The spread between evaluation circles is a sensitivity indicator, not an error b
 """
 from dataclasses import dataclass
 import numpy as np
-from motor_sim.postprocess import triangulation, element_b
+from flux_gazer.postprocess import triangulation, element_b
 
 
 @dataclass(frozen=True)

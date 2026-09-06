@@ -1,9 +1,9 @@
 import numpy as np
 import pytest
-from motor_sim.geometry import Parameters, Geometry
-from motor_sim.excitation import winding, currents, dq, winding_axis
-from motor_sim.solver import solve
-from motor_sim.postprocess import tooth_br
+from flux_gazer.geometry import Parameters, Geometry
+from flux_gazer.excitation import winding, currents, dq, winding_axis
+from flux_gazer.solver import solve
+from flux_gazer.postprocess import tooth_br
 
 
 @pytest.mark.parametrize('poles,slots',[(4,6),(8,12),(10,12),(12,18),(16,24),(24,36)])

@@ -1,11 +1,11 @@
 from dataclasses import replace
 import numpy as np
 import pytest
-from motor_sim.geometry import Parameters, Geometry
-from motor_sim.excitation import currents, dq
-from motor_sim.solver import solve
-from motor_sim.postprocess import tooth_br, element_b
-from motor_sim.cache import FieldCache
+from flux_gazer.geometry import Parameters, Geometry
+from flux_gazer.excitation import currents, dq
+from flux_gazer.solver import solve
+from flux_gazer.postprocess import tooth_br, element_b
+from flux_gazer.cache import FieldCache
 
 
 @pytest.fixture(scope='module')
@@ -64,7 +64,7 @@ def test_computed_field_sign_and_weakening(solution):
 
 def test_polarity_and_rotation(solution):
     from matplotlib.tri import LinearTriInterpolator
-    from motor_sim.postprocess import triangulation
+    from flux_gazer.postprocess import triangulation
     # Radial B by tangential Az differences just outside every magnet.
     for angle in (0,.13):
         s = solution if angle==0 else solve(Parameters(),angle)

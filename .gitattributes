@@ -1,0 +1,5 @@
+# Keep local IDE settings out of git-archive source distributions.
+.idea export-ignore
+artifacts export-ignore
+.venv export-ignore
+.venv-sim export-ignore
