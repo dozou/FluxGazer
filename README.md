@@ -20,7 +20,7 @@ FluxGazer独自のソースコードと文書は **MIT License** です。[LICEN
 
 現行の機能・計算式・画面・JSON/CSV形式をまとめた仕様書は [doc/specification.md](doc/specification.md) を参照してください。
 
-AIエージェント向けの開発規約は [AGENT.md](AGENT.md) にまとめています。一般的な自動検出名の [AGENTS.md](AGENTS.md) からも参照できます。
+AIエージェント向けの開発規約は [AGENTS.md](AGENTS.md) にまとめています。
 
 ## グラフ点列のCSV保存・軸設定
 
