@@ -1,0 +1,30 @@
+{
+  "format": "motor_sim.standard_spm",
+  "version": 1,
+  "units": "dimensionless",
+  "winding": "nearest_signed_phase_belt_v1",
+  "parameters": {
+    "poles": 10,
+    "slots": 12,
+    "air_gap": 0.05,
+    "yoke_inner": 1.275,
+    "yoke_outer": 1.5,
+    "tooth_inner": 0.9500000000000001,
+    "tooth_outer": 1.32,
+    "tooth_half_width": 0.0975,
+    "apothem": 0.705,
+    "shaft_radius": 0.15,
+    "magnet_half_width": 0.24,
+    "magnet_height": 0.18,
+    "coil_inner": 1.0119047619047619,
+    "coil_outer": 1.2285714285714284,
+    "coil_v_inner": 0.11699999999999999,
+    "coil_v_outer": 0.18,
+    "iron_mu": 800.0,
+    "magnet_mu": 1.05,
+    "remanence": 1.0,
+    "current_density": 5.0,
+    "boundary": 5.0,
+    "spacing": 0.018
+  }
+}
