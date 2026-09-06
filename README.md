@@ -1,5 +1,7 @@
 # FluxGazer — Electric Motor Simulation
 
+**開発版 / Experimental** — 実機設計に使用する精度・信頼性は検証中です。
+
 FluxGazer（フラックスゲイザー）は、回転型モーターの磁界と特性を可視化するPythonシミュレータです。現行版はSPMモーターの二次元・線形静磁界解析と無次元トルクの参考表示に対応し、初期モデルは8極12スロットです。
 
 ## プロジェクトの目的
@@ -170,7 +172,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe validate.py
 ```
 
-7テストで形状の数・重複、電流和、電気角、正逆のdq、計算した磁界のN/S交互性、回転後の極性、電流磁界のd/q方向、進角によるPM方向成分の低下、重ね合わせ、ゼロ励磁、キャッシュ、GUIの主要操作・描画を確認しています。GUI検証はQt offscreenでウィンドウを生成し、`artifacts/gui.png` を保存します。
+直近の自動検証は39ケース通過しています。形状・空隙・巻線、磁界の符号と重ね合わせ、トルク、JSON／CSV入出力、GUI操作・配色・グラフ軸設定を確認しています。GUI検証はQt offscreenでウィンドウを生成し、`artifacts/gui.png` などを保存します。新規PCでの導入検証や実機精度の保証とは異なります。
 
 `validate.py` は機械角0.137 rad、PM単独の比較を `artifacts/validation.json` に保存します。この環境での既定解との差（サンプルベクトルの相対L2ノルム）：
 
